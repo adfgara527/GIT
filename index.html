@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movi360</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="login-container">
+      <h1>movi360</h1>
+        <div class="clearfix">
+          <div class="col-left">
+            <h4 class="text-uppercase">¿ Posee una cuenta ?</h4>
+            <p>Si no posee una cuenta por favor registrarse en el siguiente boton</p>
+            <label class="btn btn-default btn-outline" for="register">Sign up</label>
+            <input class="hidden" id="register" type="radio" name="choose-login" checked="checked"/>
+          </div>
+          <div class="col-right">
+            <div class ="titulo-movi">
+            <h1>movi360</h1>
+          </div>
+            <h4 class="text-uppercase">¿ Posee una cuenta ?</h4>
+            <p>Si posee una cuenta por favor iniciar sesión en el siguiente boton</p>
+            <label class="btn-outline" for="login">Login</label>
+            <input class="hidden" id="login" type="radio" name="choose-login"/>
+            <div class="background-float">
+              <form class="login-form">
+                <h3 class="text-primary">Login</h3>
+                <div class="form-group">
+                  <input class="form-control" id="exampleInputEmail1" type="email" placeholder="Email"/>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password"/>
+                </div>
+                <button class="btn btn-primary" type="submit">Login</button>
+              </form>
+              <form class="register-form">
+                <h3 class="text-primary">Sign Up</h3>
+                <div class="form-group">
+                  <input class="form-control" id="nombre" type="text" name="nombre" placeholder="Nombre"/>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" id="email" type="email" name="email" placeholder="Email"/>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" id="contrasena" type="password" name="contrasena" placeholder="Contraseña"/>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" id="confirmarContrasena" type="password" name="confirmarContrasena" placeholder="Confirmar contraseña"/>
+                  </div>
+                <button class="btn btn-primary" type="submit" onclick="validarDatos()">Sign Up</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+<script type="text/JavaScript">
+
+  function validarDatos() {
+    var nombre = document.getElementById("nombre").value;
+    var email = document.getElementById("email").value;
+    var contraseña = document.getElementById("contrasena").value;
+    var confirmarContraseña = document.getElementById("confirmarContrasena").value;
+
+    if (nombre === "" || email === ""|| contraseña === ""|| confirmarContraseña === ""){
+      alert ("Por favor completar todos los campos")
+      return false;
+    }
+    alert ("Elementos enviados con exito")
+    return true;
+
+  }
+
+</script>
+</html>
